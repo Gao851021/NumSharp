@@ -206,6 +206,9 @@ namespace NumSharp.Backends
                 case "Byte":
                     _arrayByte = new byte[shape.Size];
                     break;
+                case "Char":
+                    _arrayChar = new char[shape.Size];
+                    break;
                 case "Boolean":
                     _arrayBoolean = new bool[shape.Size];
                     break;
@@ -345,6 +348,8 @@ namespace NumSharp.Backends
                     return _arrayByte;
                 case "Boolean":
                     return _arrayBoolean;
+                case "Char":
+                    return _arrayChar;
                 case "Int16":
                     return _arrayInt16;
                 case "UInt16":
@@ -470,6 +475,9 @@ namespace NumSharp.Backends
                 {
                     case "Boolean":
                         _arrayBoolean = values as bool[];
+                        break;
+                    case "Char":
+                        _arrayChar = values as char[];
                         break;
                     case "Byte":
                         _arrayByte = values as byte[];

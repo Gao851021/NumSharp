@@ -82,6 +82,8 @@ namespace NumSharp
                 var nd = new NDArray(array.GetType().GetElementType());
                 switch (Type.GetTypeCode(nd.dtype))
                 {
+                    case TypeCode.Char:
+                        return nd.FromMultiDimArray<char>(array);
                     case TypeCode.Byte:
                         return nd.FromMultiDimArray<byte>(array);
                     case TypeCode.Boolean:
